@@ -64,6 +64,17 @@ export default function Dashboard() {
               </Typography>
             </Box>
 
+            {userProfile?.role === 'Admin' && (
+              <Button 
+                variant="contained" 
+                color="secondary" 
+                onClick={() => navigate('/admin')}
+                sx={{ mb: 4 }}
+              >
+                Go to Admin Dashboard
+              </Button>
+            )}
+
             <Box sx={{ mb: 4, display: 'flex', gap: 2, alignItems: 'center' }}>
               <TextField 
                 size="small" 
